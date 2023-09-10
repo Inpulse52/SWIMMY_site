@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>SWIMMY Login</title>
+        <meta name="SWIMMY Login Page" content="Login">
+        <link rel="icon" href="SWIMMYicon.png">
+    </head>
+
+    <body> 
+        <form id="loginWidget">
+            <h1 id="loginTitle">Login</h1>
+            <input id="usernameInput", name="Username", placeholder="Username"><br>
+            <input id="passwordInput", name="Passwrod", placeholder="Password", type="password"><br>
+            <button id="loginButton", type="button", onclick="fun()">Login</button><br>
+            <a id="joinNow", href="___">New? Join Now!</a>
+            <a id="forgotPassword", href="___">Forgot Password?</a>
+        </form>
+    </body>
+</html>
+
+<css>
+    <style>
+        @font-face {
+            font-family: 'FontA'; /*a name to be used later*/
+                src: url('Nexa-Heavy.ttf'); /*URL to font*/
+        }
+        @font-face {
+            font-family: 'FontB';
+                src: url('Nexa-ExtraLight.ttf');
+        }
+        
+        body {
+            background-image: url('loginBackground.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        #loginWidget{
+                background-color: rgba(218, 30, 30, 0);
+                border-style: None;
+                border-color: black;
+                border-radius: 30px;
+                margin: 240 auto;
+                width: 400;
+                height: 400;}
+        #loginTitle {
+                font-family: FontA;
+                font-size: 50;
+                color: white;
+                width: 360;
+                height: 25;
+                text-align: center;
+                padding-top: 15;}
+        #usernameInput {
+                margin: 25 0;
+                border-radius: 20px;
+                font-family: FontB;
+                font-size: 25;
+                color: white;
+                padding-left: 30px;
+                width: 400;
+                height: 45;
+                border-style: none;
+                background-color: rgba(0, 0, 0, 0.212);}
+        #passwordInput {
+                margin: 0 0;
+                border-radius: 20px;
+                font-family: FontB;
+                font-size: 25;
+                color: white;
+                padding-left: 30px;
+                width: 400;
+                height: 45;
+                border-style: none;
+                background-color: rgba(0, 0, 0, 0.212);}        
+        #loginButton {
+            
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-radius: 20px;
+            font-family: FontB;
+            font-size: 25;
+            color: white;
+            width: 400;
+            height: 45;
+            border-style: none;
+            background-color: rgba(0, 0, 0, 0.212);}
+        #joinNow {
+            background-color: rgba(0, 128, 0, 0);
+            padding-left: 10;
+            text-align: right;
+            font-family: FontB;
+            font-size: 15;
+            color: white;}
+            #forgotPassword {
+            background-color: rgba(0, 0, 0, 0);
+            padding-left: 130;
+            text-align: right;
+            font-family: FontB;
+            font-size: 15;
+            color: white;
+        }
+    </style>
+    <script>
+        function fun() { 
+            var userName = document.getElementById('usernameInput').value
+            var password = document.getElementById('passwordInput').value
+            console.log(password + userName)
+      }
+    </script>
+</css>
